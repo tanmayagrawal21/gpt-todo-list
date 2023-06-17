@@ -15,7 +15,6 @@
     "langchain": "^0.0.95",
     "roboto-fontface": "*",
     "vue": "^3.2.13",
-    "vuetify": "npm:@vuetify/nightly@next",
     "webfontloader": "^1.0.0"
   },
   "devDependencies": {

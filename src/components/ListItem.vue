@@ -67,7 +67,7 @@ export default {
         },
         subTasksSizeZero() {
             if (this.subTasksModifiable.length != 0) {
-                this.x = 1;
+                this.x = +1;
             }
             return this.subTasksModifiable.length == 0;
         }
