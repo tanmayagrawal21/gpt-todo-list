@@ -1,9 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vuetify from 'vite-plugin-vuetify'
-import dotenv from 'dotenv'
 
-dotenv.config() // load .env file
 
 const path = require('path')
 
@@ -17,7 +15,7 @@ export default defineConfig({
     }),
   ],
   define: { 
-    'process.env': {VITE_OPENAI_KEY: process.env.VITE_OPENAI_KEY} 
+    'process.env': {} 
     
   },
   resolve: {

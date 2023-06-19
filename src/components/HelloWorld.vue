@@ -38,9 +38,15 @@ export default {
   data: () => ({
     tasks: [
 
-    ]
+    ],
+    api_key: null
   }), mounted(){
+    this.api_key = localStorage.getItem('api_key')
     this.tasks = JSON.parse(localStorage.getItem('tasks')) || []
+    if (!this.api_key) {
+      this.api_key = prompt("Please enter your OpenAI API key")
+      localStorage.setItem('api_key', this.api_key.trim())
+    }
   },
   methods: {
     addTask() {
