@@ -39,7 +39,9 @@ export default {
     tasks: [
 
     ]
-  }),
+  }), mounted(){
+    this.tasks = JSON.parse(localStorage.getItem('tasks')) || []
+  },
   methods: {
     addTask() {
       // add data from text field to tasks
@@ -53,6 +55,7 @@ export default {
       })
       // clear the text field
       this.newTask = ""
+      localStorage.setItem('tasks', JSON.stringify(this.tasks))
     }
   }
 }
