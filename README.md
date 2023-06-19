@@ -1,4 +1,6 @@
 # gpt-todo
+# Website demo
+https://tanmayagrawal21.github.io/gpt-todo-list/
 
 ## Project setup
 ```
