@@ -4,7 +4,7 @@
     <!-- each task encapsulated in a box with option to delete -->
     <v-container v-for="(task, index) in tasks" :key="index">
       <!--delete button-->
-      <v-btn icon @click="tasks.splice(index, 1)">
+      <v-btn icon @click="deleteTask(index)">
         <v-icon>mdi-delete</v-icon>
       </v-btn>
       <!--list item-->
@@ -61,6 +61,10 @@ export default {
       })
       // clear the text field
       this.newTask = ""
+      localStorage.setItem('tasks', JSON.stringify(this.tasks))
+    },
+    deleteTask(index) {
+      this.tasks.splice(index, 1) 
       localStorage.setItem('tasks', JSON.stringify(this.tasks))
     }
   }
